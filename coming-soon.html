@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coming soon - alex's eudaimonia</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <a href="/" class="logo">
+        <img src="bongo.gif" alt="Home" class="logo-image">
+    </a>
+    
+    <div class="container">
+        <main class="page-content">
+            <div class="coming-soon-content">
+                <h1 class="page-title">coming soon</h1>
+                
+                <div class="coming-soon-message">
+                    <p>this page is still brewing in my mind—like good coffee, some things are worth the wait.</p>
+                </div>
+                
+                <div class="coming-soon-actions">
+                    <a href="javascript:history.back()" class="nav-link">← go back</a>
+                    <a href="/" class="nav-link">home →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <style>
+        .coming-soon-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .coming-soon-message {
+            margin: 2rem 0 3rem 0;
+            opacity: 0.8;
+        }
+        
+        .coming-soon-message p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .coming-soon-actions {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .coming-soon-actions .nav-link {
+            padding: 0.8rem 1.5rem;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .coming-soon-actions .nav-link:hover {
+            background: rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .coming-soon-actions {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</body>
+</html> 
