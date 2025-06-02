@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    color: #000000;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Profile drawing background element */
+.paper-airplane {
+    position: fixed;
+    top: 50%;
+    right: 15%;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.8;
+    pointer-events: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.paper-airplane img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Small paper airplane decorative element */
+.paper-airplane-small {
+    position: fixed;
+    top: 15%;
+    right: 8%;
+    width: 240px;
+    height: 120px;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+    transform: rotate(-15deg);
+}
+
+.paper-airplane-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    z-index: 1000;
+    display: block;
+    border-radius: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background: #ffffff;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 70px;
+    height: 45px;
+    object-fit: cover;
+    display: block;
+    background: #ffffff;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20%;
+}
+
+.content {
+    text-align: left;
+    padding: 2rem;
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: clamp(2.4rem, 6.4vw, 4.8rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: none;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000000;
+    position: relative;
+    z-index: 3;
+    
+    /* Typewriter effect */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    max-width: fit-content;
+    animation: typewriter 1.5s steps(13, end) forwards, 
+               blink-caret 0.75s step-end infinite 1.5s,
+               remove-caret 0s linear 4s forwards;
+    border-right: 3px solid rgba(0, 0, 0, 0.75);
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(0, 0, 0, 0.75); }
+}
+
+@keyframes remove-caret {
+    to { border-right: none; }
+}
+
+.about-intro {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    margin-bottom: 3rem;
+    opacity: 0;
+    color: #333333;
+    line-height: 1.6;
+    max-width: 500px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    animation: fadeIn 0.5s ease-in-out 2.2s forwards;
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out 2.5s forwards;
+    position: relative;
+    z-index: 2;
+}
+
+.link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.03);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.link:hover::before {
+    left: 100%;
+}
+
+.link:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        justify-content: flex-start;
+    }
+    
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .link {
+        width: 200px;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+} 

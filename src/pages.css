@@ -1,0 +1,466 @@
+/* Page-specific styles for About, Research, Writing, Contact */
+
+a:not(.logo):not(.nav-link):not(.link):not(.contact-link):not(.social-link):not(.research-link):not(.post-title) {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+a:not(.logo):not(.nav-link):not(.link):not(.contact-link):not(.social-link):not(.research-link):not(.post-title):hover {
+    color: #333333;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 2px;
+}
+
+.page-content {
+    text-align: left;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0;
+}
+
+.page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #000000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.page-quote {
+    text-align: left;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555555;
+    margin: 2rem 0 3rem 0;
+    padding: 0;
+    border: none;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    line-height: 1.5;
+}
+
+.page-quote cite {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: #777777;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* About Page */
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #333333;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Research Page */
+.research-intro {
+    margin-bottom: 3rem;
+}
+
+.research-intro p {
+    font-size: 1.1rem;
+    color: #333333;
+    line-height: 1.7;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.research-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.research-card {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.research-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.research-card p {
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.research-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.research-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.research-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+/* Writing Page */
+.writing-intro {
+    margin-bottom: 3rem;
+}
+
+.writing-intro p {
+    font-size: 1.1rem;
+    color: #333333;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.posts-list {
+    margin-bottom: 3rem;
+}
+
+.post-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-bottom: 0.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.post-title {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    transition: color 0.2s ease;
+}
+
+.post-title:hover {
+    color: #333333;
+}
+
+.post-excerpt {
+    color: #333333;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Contact Page */
+.contact-intro {
+    margin-bottom: 3rem;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    color: #333333;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.contact-methods {
+    margin-bottom: 3rem;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.contact-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.contact-link:hover {
+    border-color: #000000;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.social-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.location {
+    color: #333333;
+    margin: 0.25rem 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Navigation between pages */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+
+.nav-link:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1rem;
+    }
+    
+    .research-grid {
+        gap: 1.5rem;
+    }
+    
+    .research-card {
+        padding: 1.5rem;
+    }
+    
+    .page-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}
+
+/* Mnemosyne/Photos Page */
+.mnemosyne-intro {
+    margin-bottom: 3rem;
+}
+
+.mnemosyne-intro p {
+    font-size: 1.1rem;
+    color: #333333;
+    line-height: 1.7;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.greek-note {
+    font-style: italic;
+    font-size: 0.9rem !important;
+    color: #666666 !important;
+    margin-top: 1rem !important;
+}
+
+.photo-gallery {
+    margin-bottom: 3rem;
+}
+
+.photo-section {
+    margin-bottom: 4rem;
+}
+
+.photo-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-weight: 400;
+}
+
+.photo-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.photo-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.photo-grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.photo-grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.photo-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.photo-placeholder {
+    min-width: 200px;
+    width: 200px;
+    aspect-ratio: 4/3;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    scroll-snap-align: start;
+}
+
+.photo-placeholder:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.photo-placeholder span {
+    color: #999999;
+    font-size: 0.9rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-style: italic;
+}
+
+/* When you add actual photos, you can use this class */
+.photo-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.02);
+}
+
+/* Coming Soon Page */
+.coming-soon-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coming-soon-message {
+    margin: 2rem 0 3rem 0;
+    opacity: 0.8;
+}
+
+.coming-soon-message p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.coming-soon-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.coming-soon-actions .nav-link {
+    padding: 0.8rem 1.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.coming-soon-actions .nav-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .coming-soon-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+} 
