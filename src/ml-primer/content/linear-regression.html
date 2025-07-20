@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alex's eudaimonia</title>
+    <link rel="icon" type="image/x-icon" href="../../../public/favicon.ico">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../pages.css">
+    <link rel="stylesheet" href="../primer.css">
+    
+    <!-- MathJax for LaTeX support -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <a href="/" class="logo">
+        <img src="../../../public/bongo.gif" alt="Home" class="logo-image">
+    </a>
+    
+    <div class="container">
+        <main class="page-content">
+            <div id="markdown-content" class="markdown-content">
+                <div class="loading">Loading chapter...</div>
+            </div>
+            
+            <nav class="page-nav">
+                <a href="../index.html" class="nav-link">← back to primer</a>
+                <a href="../../writing.html" class="nav-link">writing</a>
+            </nav>
+        </main>
+    </div>
+
+    <script>
+        async function loadMarkdown() {
+            try {
+                const response = await fetch('linear-regression.md');
+                const markdownText = await response.text();
+                
+                // Configure marked with options
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true
+                });
+                
+                // Convert markdown to HTML
+                const htmlContent = marked.parse(markdownText);
+                
+                // Insert the HTML content
+                document.getElementById('markdown-content').innerHTML = htmlContent;
+                
+                // Re-render MathJax after content is loaded
+                if (window.MathJax) {
+                    MathJax.typesetPromise();
+                }
+            } catch (error) {
+                console.error('Error loading markdown:', error);
+                document.getElementById('markdown-content').innerHTML = 
+                    `<div class="error">
+                        <h2>Chapter Not Found</h2>
+                        <p>The requested chapter could not be loaded: ${error.message}</p>
+                        <p><a href="../index.html">← Return to primer index</a></p>
+                    </div>`;
+            }
+        }
+
+        // Load markdown when page loads
+        document.addEventListener('DOMContentLoaded', loadMarkdown);
+    </script>
+</body>
+</html> 
